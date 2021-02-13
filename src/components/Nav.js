@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const state1 = { page1State: true };
-const state2 = { page2State: true };
+const state1 = { page1_State: true };
+const state2 = { page2_State: true };
 function Nav() {
   
   return (
@@ -11,8 +11,8 @@ function Nav() {
         <a href="/#" className="brand-logo left">My App</a>
         <ul className="right">
           <li><Link to="/"> Home</Link></li>
-          <li><NavLink to={{ pathname: "/page1", prop: 1, state1: state1 }}>Page1</NavLink></li>
-          <li><NavLink to={{ pathname: "/page2", prop: 2, state2: state2 }}>Page2</NavLink></li>
+          <li><NavLink to={{ pathname: "/page1", prop1: 1.1, prop2: state1 }}>Page1</NavLink></li>
+          <li><NavLink to={{ pathname: "/page2", prop1: 1.2, prop2: state2 }}>Page2</NavLink></li>
         </ul>
       </div>
     </nav >
