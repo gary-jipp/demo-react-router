@@ -8,6 +8,7 @@ function Home(props) {
     <div className="container">
       <h3>Home Page</h3>
       <p className="flow-text">{loc}</p>
+      {props.test}
     </div>
   );
 }
