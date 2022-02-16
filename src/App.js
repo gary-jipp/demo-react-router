@@ -15,10 +15,21 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Nav />
-        <Route exact path='/' render={(props) => <Home test="123"/>} />
+
+        {/* Any state used by pages needs to be in the parent of Routes */}
+        
+        <Route exact path='/' render={(props) => <Home {...props} test="123" />} />
         <Route path='/page1' component={Page1} />
         <Route path='/page2' component={Page2} />
+
+        {/* React Router 4/5 */}
+        <Route path="/dashboard" render={(props) => <Page2 {...props} test={true} />} />
+
+        {/* React Router 6 - better */}
+        {/* <Route path="/dashboard" element={<Page2 test={true} />} /> */}
+
       </div>
+
     </BrowserRouter>
   );
 }
